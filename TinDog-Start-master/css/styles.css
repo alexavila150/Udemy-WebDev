@@ -1,82 +1,127 @@
 h1 {
-  color: white;
-  font-family: "Montserrat";
-  font-size: 3.5rem;
-  line-height: 1.5;
-  font-weight: 900;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+h2{
+    color: white;
+    font-family: "Montserrat", serif;
+    font-size: 3.0rem;
+    line-height: 1.5;
+    font-weight: 900;
 }
 
 h3 {
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 1.5rem
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 nav{
-  font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
 }
 
 p {
-  color: #8f8f8f;
+    color: #8f8f8f;
 }
 
 .container-fluid {
-  padding: 3% 15%;
+    padding: 3% 15%;
 }
 
-/* Navigation Bars */
+/*******************************************************************************************
+                                    Navigations Bar
+*******************************************************************************************/
 
 .navbar {
-  padding: 0 0 4.5rem;
+    padding: 0 0 4.5rem;
 }
 
 .navbar-brand {
-  font-size: 2.5rem;
-  font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .nav-item {
-  padding: 0 18px;
+    padding: 0 18px;
 }
 
 .nav-link {
-  font-size: 1.2rem;
-  font-family: "Montserrat";
-  font-weight: lighter;
+    font-size: 1.2rem;
+    font-family: "Montserrat", serif;
+    font-weight: lighter;
 }
 
-/* Download Buttons */
+/*******************************************************************************************
+                                    Download Buttons
+*******************************************************************************************/
 
 .download-button {
-  margin: 5% 3% 5% 0;
+    margin: 5% 3% 5% 0;
 }
 
 .phone-img {
-  width: 60%;
-  transform: rotate(25deg);
+    width: 60%;
+    transform: rotate(25deg);
 }
 
-/* Features */
+/*******************************************************************************************
+                                    Features
+*******************************************************************************************/
 
 .features {
-  color: #ef8172;
-  padding-bottom: 1rem;
+    color: #ef8172;
+    padding-bottom: 1rem;
 }
 
 .features:hover{
-  color: #ff4c68;
+    color: #ff4c68;
 }
 
 .row-features{
-  margin: 0;
-  padding: 10rem;
+    margin: 0;
+    padding: 10rem;
 }
 
 .col-features{
-  text-align: center;
+    text-align: center;
 }
 
 #title {
-  background-color: #ff4c68;
-  color: #fff;
+    background-color: #ff4c68;
+    color: #fff;
+}
+
+/*******************************************************************************************
+                                    Testimonials
+*******************************************************************************************/
+
+#testimonials{
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ef8172;
+}
+
+.testimonial-image{
+    border-radius: 100%;
+    width: 10%;
+    margin: 20px;
+}
+
+.testimonial-author{
+    color: white;
+}
+
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
 }
