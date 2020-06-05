@@ -29,7 +29,7 @@ p {
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 /*******************************************************************************************
@@ -66,6 +66,8 @@ p {
 .phone-img {
     width: 60%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
 }
 
 /*******************************************************************************************
@@ -88,6 +90,12 @@ p {
 
 .col-features{
     text-align: center;
+}
+
+#features{
+    background-color: white;
+    position: relative;
+    z-index: 1;
 }
 
 #title {
