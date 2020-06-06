@@ -98,6 +98,8 @@ p {
     z-index: 1;
 }
 
+
+
 #title {
     background-color: #ff4c68;
     color: #fff;
@@ -156,4 +158,16 @@ p {
 
 .pricing-column{
     padding: 3% 2%;
+}
+
+
+@media (max-width: 1028px) {
+    #title{
+        text-align: center;
+    }
+
+    .phone-img{
+        position: static;
+        transform: rotate(0);
+    }
 }
