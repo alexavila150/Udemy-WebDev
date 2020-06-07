@@ -171,3 +171,37 @@ p {
         transform: rotate(0);
     }
 }
+
+/*******************************************************************************************
+                                    Call To Action
+*******************************************************************************************/
+
+#cta{
+    background-color: #ff4c68;
+    text-align: center;
+    padding: 7% 20%;
+}
+
+.cta-h3{
+    color: white;
+    font-family: "Montserrat", serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+/*******************************************************************************************
+                                    Footer
+*******************************************************************************************/
+
+#footer{
+    background-color: white;
+    text-align: center;
+    padding: 5% 15% 2% 15%;
+}
+
+.footer-icon{
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
