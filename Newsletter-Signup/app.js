@@ -1,6 +1,8 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const request = require("request")
+const https = require("https")
+const { Http2ServerResponse } = require("http2")
 
 const app = express()
 
@@ -13,11 +15,61 @@ app.get("/", function(req, res){
 
 app.post("/", function(req, res){
     console.log("POST")
-    console.log(req.body.firstName)
-    console.log(req.body.lastName)
-    console.log(req.body.email)
+    const fisrtName = req.body.firstName
+    const lastName = req.body.lastName
+    const email = req.body.email
+
+    const data = {
+        members:[
+            {
+                email_address: email,
+                status: "subscribed",
+                merge_fields:{
+                    FNAME: fisrtName,
+                    LNAME: lastName
+                }
+            }
+        ]
+    }
+
+
+
+    const jsonData = JSON.stringify(data)
+    const url = "https://us17.api.mailchimp.com/3.0/lists/d5985c266a" 
+    const options = {
+        method: "POST",
+        auth: "Alex:0fd3fd26383976fc02117676e11c3b2f-us17"
+    }
+
+    const request = https.request(url, options, function(response){
+        
+        response.on("data", function(data){
+            const json = JSON.parse(data)
+            console.log(JSON.parse(data)) 
+            console.log("Error count: " + json.error_count)
+        })
+        
+        if(response.statusCode === 200){
+            res.sendFile(__dirname + "/success.html")
+        }else{
+            res.sendFile(__dirname + "/failure.html");
+        }
+    })
+
+    request.write(jsonData)
+    request.end()
+})
+
+app.post("/failure", function(req, res){
+    res.redirect("/")
 })
 
 app.listen(3000, function(){
     console.log("Server is running on port 3000")
 })
+
+//API Key
+//0fd3fd26383976fc02117676e11c3b2f-us17
+
+//List Id
+//d5985c266a
